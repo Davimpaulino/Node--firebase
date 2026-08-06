@@ -1,0 +1,52 @@
+
+  {
+  "categorias": {
+    "-OZjSExOxoGzEVr5T_6_": {
+      "descricao": "ererer",
+      "nome": "ET"
+    },
+    "-Oyj_nElmParK2Sy8dD-": {
+      "nome": "TESTE"
+    }
+  },
+  "cursos": {
+    "-O_s7loRGUwbQvfvJ93V": {
+      "descricao": "",
+      "nome": "ds"
+    },
+    "-O_s7n0M-d0hE8rEcvxd": {
+      "descricao": "",
+      "nome": "ds"
+    },
+    "-O_s8YpglSOK0pM3uYCX": {
+      "descricao": "lala",
+      "nome": "ds"
+    }
+  },
+  "usuarios": {
+    "-Ol7kr-HnqYsHEK-gRzu": {
+      "email": "dsfdsf@tesxcfdfe",
+      "nome": "dsfd"
+    }
+  },
+  "fornecedores": {
+    "1": {
+      "CNPJ": "1234.5678/1234-00",
+      "nome": "ETEC"
+    },
+    "2": {
+      "CNPJ": "4789.3972/1340-68",
+      "nome": "CPS"
+    }
+  },
+  "clientes": {
+    "1": {
+      "email": "milton@gmail.com",
+      "nome": "Milton"
+    },
+    "2": {
+      "email": "Wagner@gmail.com",
+      "nome": "Wagner"
+    }
+  }
+}
