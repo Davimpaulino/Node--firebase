@@ -8,3 +8,11 @@ exports.index = async(req, res) => {
         clienteEditar: null
     });
 }
+exports.salvar = async(req, res) => {
+    await model.salvar({
+        nome: req.body.nome.toUpperCase(),
+        email: req.body.email
+    });
+
+    res.redirect("/clientes")
+}

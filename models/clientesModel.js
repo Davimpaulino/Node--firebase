@@ -14,6 +14,16 @@ async function listar() {
     }));
 }
 
+async function salvar(cliente) {
+    let novoRegistro = ref.push();
+
+    await novoRegistro.set({
+        nome: cliente.nome,
+        email: cliente.email
+    })
+}
+
 module.exports = {
-    listar
+    listar,
+    salvar
 }

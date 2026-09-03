@@ -14,6 +14,16 @@ async function listar() {
     }));
 }
 
+async function salvar(fornecedor) {
+    let novoRegistro = ref.push();
+
+    await novoRegistro.set({
+        nome: fornecedor.nome,
+        CNPJ: fornecedor.CNPJ
+    })
+}
+
 module.exports = {
-    listar
+    listar,
+    salvar
 }
