@@ -1,7 +1,6 @@
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccountKey.json");
 
-// Garante que as quebras de linha da private_key do JSON funcionem no Render
 if (serviceAccount.private_key) {
   serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
 }
