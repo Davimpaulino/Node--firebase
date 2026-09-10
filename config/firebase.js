@@ -1,9 +1,10 @@
 const admin = require("firebase-admin");
+let serviceAccount = require("./serviceAccountKey.json");
 
-// Pega a chave da variável do Render ou do arquivo local
-const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
-  ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
-  : require("./serviceAccountKey.json");
+// Se o JSON veio formatado do arquivo/env com \n como texto puro, converte em quebras de linha reais
+if (typeof serviceAccount === "string") {
+  serviceAccount = JSON.parse(serviceAccount);
+}
 
 if (serviceAccount.private_key) {
   serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
