@@ -1,23 +1,12 @@
 {
-  "name": "exemplo-rotas",
+  "name": "meu-site-node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "ejs": "^4.0.1",
-    "express": "^5.2.1",
-    "express-ejs-layouts": "^2.5.1",
-    "firebase-admin": "^13.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+    "express": "^4.18.2",
+    "firebase": "^11.0.0"
   }
 }
