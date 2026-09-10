@@ -1,12 +1,16 @@
-// CONFIGURAÇÃO FIREBASE REALTIME DATABASE
-const { initializeApp } = require("firebase/app");
-const { getDatabase } = require("firebase/database");
+const admin = require("firebase-admin");
+const serviceAccount = require("./serviceAccountKey.json");
 
-const firebaseConfig = {
+// Garante que as quebras de linha da private_key do JSON funcionem no Render
+if (serviceAccount.private_key) {
+  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+}
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sistemasweb-8fc66-default-rtdb.firebaseio.com"
-};
+});
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+const db = admin.database();
 
 module.exports = db;
