@@ -1,11 +1,16 @@
 const admin = require("firebase-admin");
+const serviceAccount = require("./serviceAccountKey.json");
 
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+// Ajusta a chave privada se houver escapamento de caracteres
+if (serviceAccount && serviceAccount.private_key) {
+  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+}
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sistemasweb-8fc66-default-rtdb.firebaseio.com"
 });
 
-module.exports = admin.database();
+const db = admin.database();
+
+module.exports = db;
